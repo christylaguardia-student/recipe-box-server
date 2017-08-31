@@ -4,13 +4,16 @@
   "description": "server for the recipe-box-app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:e2e": "mocha tests/e2e",
+    "test:unit": "mocha tests/unit",
+    "test": "mocha tests --recursive",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christylaguardia/recipe-box-server.git"
   },
-  "author": "",
+  "author": "Christy La Guardia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/christylaguardia/recipe-box-server/issues"
@@ -23,6 +26,9 @@
     "mocha": "^3.5.0"
   },
   "dependencies": {
-    "mongoose": "^4.11.9"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9",
+    "morgan": "^1.8.2"
   }
 }
