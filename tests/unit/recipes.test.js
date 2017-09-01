@@ -5,17 +5,17 @@ describe('Recipe Model', () => {
 
   it('validates with required fields', () => {
     const recipe = new Recipe({
-      name: 'Peanut Butter Sandwich',
+      title: 'Peanut Butter Sandwich',
       instructions: 'Spread peanut butter on one slice of bread, and jelly on the other',
       ingredients: [
-        { title: 'Bread', amount: 2 },
-        { title: 'Peanut Butter', amount: 2, unit: 'tbsp' },
-        { title: 'Jelly', amount: 2, unit: 'tbsp' }
+        { name: 'Bread', amount: 2 },
+        { name: 'Peanut Butter', amount: 2, unit: 'tbsp' },
+        { name: 'Jelly', amount: 2, unit: 'tbsp' }
       ]
     });
 
     recipe.validate();
-
+    
   });
 
   it('validation fails without required fields', () => {
