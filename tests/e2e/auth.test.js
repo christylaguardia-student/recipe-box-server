@@ -7,7 +7,6 @@ describe.only('user auth', () => {
   before(db.drop);
 
   const user = {
-    username: 'Christy La Guardia',
     email: 'me@laguardia.com',
     password: 'love2code'
   };
